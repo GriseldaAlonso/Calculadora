@@ -9,18 +9,37 @@ const corroborarNum = (a, b) => {
 const calcular = (a, b, operacion) => {
   if (corroborarNum(a, b)) {
     if (operacion == "suma") {
-      return a + b;
+      return suma(a,b);
     }
     if (operacion == "resta") {
-      return a - b;
+      return resta(a, b);
     }
     if (operacion == "multiplicar") {
-      return a * b;
+      return multiplicar(a, b);
     }
     if (operacion == "dividir") {
-      return a / b;
+      return dividir(a, b);
     }
   } else {
     return "valor ingresado no es un numero";
   }
 };
+
+
+function suma(numero1, numero2) {
+   return numero1 + numero2;
+}
+
+function resta(numero1, numero2) {
+  return numero1 - numero2;
+}
+
+function multiplicacion(numero1, numero2) {
+  return numero1 * numero2;
+}
+
+function division(numero1, numero2) {
+  return numero1 / numero2;
+}
+
+console.log(suma(1,2,"suma"))
